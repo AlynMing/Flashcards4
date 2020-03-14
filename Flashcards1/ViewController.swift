@@ -92,12 +92,13 @@ class ViewController: UIViewController {
         if let dictionaryArray = UserDefaults.standard.array(forKey: "flashcards") as? [[String: String]]{
             let savedCards = dictionaryArray.map { dictionary -> Flashcard in
                 return Flashcard(question: dictionary["question"]!, answer: dictionary["answer"]!)
+                
             }
             flashcards.append(contentsOf: savedCards)
         }
     }
     
-  
+
 
 }
 
